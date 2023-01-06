@@ -1,0 +1,59 @@
+<p>update works!</p>
+<div class="box1">
+    <div class="box">
+        <h3 class="text1">Registration Form</h3>
+        
+        <form [formGroup]='registerform'>
+              <div class="formgroup inputbox text">
+                  <label for="ID">ID : </label>
+                  <input type="text" id="ID" formControlName="ID" class="form-control" placeholder="ID...." required="">
+                  <span class="text2" *ngIf="registerform.controls.ID.invalid && registerform.controls.ID.touched">Please Enter You ID...</span>
+              </div>
+            <div class="formgroup inputbox text">
+                <label for="fname">First Name : </label>
+                <input type="text" id="fname" formControlName="NAME" class="form-control" placeholder="You Name..." required="">
+                <span class="text2" *ngIf="registerform.controls.NAME.invalid && registerform.controls.NAME.touched ">Please Enter Frist Name...</span>
+  
+                
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text">
+                <label for="lname">Last Name : </label>
+                <input type="text" id="lname" formControlName="LASTNAME" class="form-control" placeholder="Last Name..." required="">
+                <span class="text2" *ngIf="registerform.controls.LASTNAME.invalid && registerform.controls.LASTNAME.touched">Please Enter You Last Name...</span>
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text">
+                <label for="email">Email Id : </label>
+                <input type="text" id="email" formControlName="EMAILID" class="form-control" placeholder="You email..." required="">
+                <span class="text2" *ngIf="registerform.controls.EMAILID.invalid && registerform.controls.EMAILID.touched">Please Enter You Email Id...</span>
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text">
+                <label for="phone">Phone No : </label>
+                <input type="text" id="phone" formControlName="PHONENUMBER" class="form-control" placeholder="You Phone No..." required="">
+                <span class="text2" *ngIf="registerform.controls.PHONENUMBER.invalid && registerform.controls.PHONENUMBER.touched">Please Enter You Phone No...</span>
+            </div>
+            <br>
+  
+            <div class="formgroup inputbox text" >
+                <label for="address">Address : </label>
+                <input type="text" id="address" formControlName="ADDRESS" class="form-control" placeholder="You Address..." required="">
+                <span class="text2" *ngIf="registerform.controls.ADDRESS.invalid && registerform.controls.ADDRESS.touched">Please Enter You Address...</span>
+            </div>
+            <br>
+  
+            <div class="submit">
+                <input class="button" type="submit" name="submit" id="btn" (click)="Clickme()" value="update">
+                
+            </div>
+  
+        </form>
+          
+         
+  
+    </div>
+    <router-outlet></router-outlet>
